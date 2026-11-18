@@ -1,0 +1,191 @@
+{
+ "stand": "2026-11-18T21:53:24+01:00",
+ "tage": [
+  {
+   "datum": "2026-11-16",
+   "wochentag": "Montag",
+   "gerichte": [
+    {
+     "kategorie": "Veganer Renner",
+     "name": "Grünkernpfanne mit Blumenkohl-Bohnengemüse und Möhren-Chili-Dip",
+     "preis_studierende": 2.99,
+     "vegan": true,
+     "vegetarisch": true,
+     "kcal_100g": 54.0,
+     "eiweiss_100g": 1.7,
+     "gesundheit": 8,
+     "kcal_portion": 135,
+     "begruendung": "Viel Gemüse, wenig Fett"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Fleischküchle mit Baked Beans und gebackenen Kartoffelscheiben",
+     "preis_studierende": 5.6,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 153.0,
+     "eiweiss_100g": 6.5,
+     "gesundheit": 5,
+     "kcal_portion": 383,
+     "begruendung": "Fleisch, Bohnen, moderate Kalorien"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-17",
+   "wochentag": "Dienstag",
+   "gerichte": [
+    {
+     "kategorie": "Veganer Renner",
+     "name": "Linsencurry mit Kürbis und Duftreis",
+     "preis_studierende": 2.99,
+     "vegan": true,
+     "vegetarisch": true,
+     "kcal_100g": 114.0,
+     "eiweiss_100g": 4.1,
+     "gesundheit": 9,
+     "kcal_portion": 285,
+     "begruendung": "Linsen, Gemüse, ballaststoffreich"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Teigtaschen mit Kartoffel-Quarkfüllung, Speck, Zwiebeln und Sour-Cream Dip",
+     "preis_studierende": 5.3,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 189.0,
+     "eiweiss_100g": 5.7,
+     "gesundheit": 4,
+     "kcal_portion": 473,
+     "begruendung": "Speck, Sahne, hoher Fettgehalt"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Currywurst mit Currysauce und Pommes frites",
+     "preis_studierende": 4.1,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 173.0,
+     "eiweiss_100g": 5.1,
+     "gesundheit": 3,
+     "kcal_portion": 433,
+     "begruendung": "Wurst, Pommes, viel Salz"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-18",
+   "wochentag": "Mittwoch",
+   "gerichte": [
+    {
+     "kategorie": "Veganer Renner",
+     "name": "Vollkornpasta mit Sojabolognese",
+     "preis_studierende": 2.99,
+     "vegan": true,
+     "vegetarisch": true,
+     "kcal_100g": 157.0,
+     "eiweiss_100g": 8.3,
+     "gesundheit": 7,
+     "kcal_portion": 393,
+     "begruendung": "Vollkorn, Soja, moderat"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Kartoffel-Zucchini-Gratin",
+     "preis_studierende": 4.1,
+     "vegan": false,
+     "vegetarisch": true,
+     "kcal_100g": 124.0,
+     "eiweiss_100g": 5.2,
+     "gesundheit": 6,
+     "kcal_portion": 310,
+     "begruendung": "Gemüse, etwas Käse, mittig"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Cordon bleu vom Schwein mit Bratensauce und Pommes frites",
+     "preis_studierende": 5.4,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 164.0,
+     "eiweiss_100g": 8.1,
+     "gesundheit": 3,
+     "kcal_portion": 410,
+     "begruendung": "Panierte Schnitte, Sauce, Pommes"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-19",
+   "wochentag": "Donnerstag",
+   "gerichte": [
+    {
+     "kategorie": "Veganer Renner",
+     "name": "Vollkorn Penne mit mediterranem Gemüse",
+     "preis_studierende": 2.99,
+     "vegan": true,
+     "vegetarisch": true,
+     "kcal_100g": 100.0,
+     "eiweiss_100g": 3.4,
+     "gesundheit": 9,
+     "kcal_portion": 250,
+     "begruendung": "Vollkorn, viel Gemüse, leicht"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Chili con Carne und Reis",
+     "preis_studierende": 4.4,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 128.0,
+     "eiweiss_100g": 6.3,
+     "gesundheit": 6,
+     "kcal_portion": 320,
+     "begruendung": "Fleisch, Reis, moderate Kalorien"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Allgäuer Käsespätzle mit Zwiebelschmelze",
+     "preis_studierende": 4.5,
+     "vegan": false,
+     "vegetarisch": true,
+     "kcal_100g": 186.0,
+     "eiweiss_100g": 8.0,
+     "gesundheit": 2,
+     "kcal_portion": 465,
+     "begruendung": "Käse, Sahne, sehr kalorienreich"
+    }
+   ]
+  },
+  {
+   "datum": "2026-11-20",
+   "wochentag": "Freitag",
+   "gerichte": [
+    {
+     "kategorie": "Veganer Renner",
+     "name": "Gemüse-Knusperfrikadelle mit veganer Kräutercremesauce und Reis",
+     "preis_studierende": 2.99,
+     "vegan": true,
+     "vegetarisch": true,
+     "kcal_100g": 117.0,
+     "eiweiss_100g": 2.4,
+     "gesundheit": 8,
+     "kcal_portion": 293,
+     "begruendung": "Vegan, Gemüse, wenig Fett"
+    },
+    {
+     "kategorie": "Hauptgericht",
+     "name": "Backfisch mit Remouladensauce und Kartoffelsalat",
+     "preis_studierende": 5.8,
+     "vegan": false,
+     "vegetarisch": false,
+     "kcal_100g": 174.0,
+     "eiweiss_100g": 6.4,
+     "gesundheit": 4,
+     "kcal_portion": 435,
+     "begruendung": "Frittierter Fisch, Remoulade, kalorienreich"
+    }
+   ]
+  }
+ ]
+}
