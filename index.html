@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mensa-Coach</title>
+<style>
+  :root { --akz: #4f46e5; --akz-hell: #eef0ff; --bg: #f5f6fa; --text: #1f2430; --grau: #6b7280; --rand: #e5e7eb; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, "Segoe UI", Roboto, sans-serif; }
+  header { background: #fff; border-bottom: 1px solid var(--rand); position: sticky; top: 0; z-index: 5; }
+  .kopf { max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  h1 { margin: 0; font-size: 22px; display: flex; align-items: center; gap: 10px; }
+  .logo { width: 22px; height: 22px; border-radius: 7px; background: var(--akz); display: inline-block; }
+  .umschalter { display: flex; background: var(--bg); border-radius: 12px; padding: 4px; gap: 4px; }
+  .umschalter button { border: 0; background: transparent; padding: 8px 16px; border-radius: 9px; font: inherit; font-weight: 600; color: var(--grau); cursor: pointer; }
+  .umschalter button.aktiv { background: #fff; color: var(--akz); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  main { max-width: 1120px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tab { border: 1px solid var(--rand); background: #fff; padding: 9px 16px; border-radius: 12px; font: inherit; font-weight: 600; cursor: pointer; color: var(--text); }
+  .tab.aktiv { background: var(--akz); border-color: var(--akz); color: #fff; }
+  .tab.ist-heute::after { content: " ●"; font-size: 8px; vertical-align: middle; color: var(--akz); }
+  .tab.aktiv.ist-heute::after { color: #fff; }
+  .stand { color: var(--grau); font-size: 13px; margin: 10px 2px 16px; }
+  .karte { background: #fff; border: 1px solid var(--rand); border-radius: 18px; padding: 18px; box-shadow: 0 1px 4px rgba(20,24,40,.05); }
+  .gericht { display: flex; flex-direction: column; gap: 10px; }
+  .gericht.gross { border: 2px solid var(--akz); padding: 24px; margin-bottom: 8px; }
+  .zeile { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .kategorie { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--grau); font-weight: 600; }
+  .passt { font-size: 12px; font-weight: 700; color: var(--akz); background: var(--akz-hell); padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+  .name { margin: 0; font-size: 17px; line-height: 1.3; }
+  .gross .name { font-size: 26px; }
+  .chip { align-self: flex-start; background: var(--akz); color: #fff; font-weight: 700; font-size: 13px; padding: 4px 12px; border-radius: 99px; }
+  .marken { display: flex; gap: 6px; min-height: 0; }
+  .marke { background: #e8f6ec; color: #1d6b3a; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 99px; }
+  .gesund { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+  .ampel { width: 14px; height: 14px; border-radius: 50%; flex: none; background: #c8ccd4; }
+  .ampel.gruen { background: #2fa84f; } .ampel.gelb { background: #f0b429; } .ampel.rot { background: #e0443e; }
+  .zahlen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .zahl { background: var(--bg); border-radius: 12px; padding: 8px 10px; display: flex; flex-direction: column; }
+  .zahl small { color: var(--grau); font-size: 12px; }
+  .zahl strong { font-size: 13px; }
+  .grund { margin: 0; color: var(--grau); font-size: 13px; font-style: italic; }
+  .knopf { align-self: flex-start; background: var(--akz); color: #fff; text-decoration: none; font-weight: 700; padding: 10px 18px; border-radius: 12px; margin-top: 4px; }
+  .knopf:hover { filter: brightness(1.1); }
+  .trenner { font-size: 16px; margin: 22px 2px 12px; }
+  .raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .meldung { color: var(--grau); text-align: center; padding: 40px 18px; }
+  .panel { position: sticky; top: 84px; }
+  .panel h2 { margin: 0 0 12px; font-size: 18px; }
+  .panel h3 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--grau); }
+  .schalter { display: flex; align-items: center; gap: 10px; padding: 6px 0; cursor: pointer; }
+  input[type=checkbox], input[type=range] { accent-color: var(--akz); }
+  input[type=checkbox] { width: 18px; height: 18px; }
+  .regler { display: block; margin-bottom: 14px; }
+  .reglerkopf { display: flex; justify-content: space-between; font-weight: 600; }
+  .regler input { width: 100%; }
+  .hinweis { color: var(--grau); font-size: 12px; margin: 14px 0 0; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } .panel { position: static; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="kopf">
+    <h1><span class="logo"></span>Mensa-Coach</h1>
+    <div class="umschalter" id="mensen"></div>
+  </div>
+</header>
+<main>
+  <section>
+    <div class="tabs" id="tabs"></div>
+    <p class="stand" id="stand"></p>
+    <div id="inhalt"></div>
+  </section>
+  <aside class="karte panel">
+    <h2>Meine Prioritäten</h2>
+    <h3>Filter</h3>
+    <label class="schalter"><input type="checkbox" id="vegan"> Nur vegan</label>
+    <label class="schalter"><input type="checkbox" id="vegetarisch"> Nur vegetarisch (inkl. vegan)</label>
+    <h3>Wichtigkeit von 0 bis 3</h3>
+    <div id="regler"></div>
+    <p class="hinweis">Werte mit dem Hinweis „geschätzt“ stammen von einer KI und sind nur Anhaltspunkte. Deine Einstellungen werden in diesem Browser gespeichert.</p>
+  </aside>
+</main>
+<script>
+"use strict";
+const MENSEN = { flandernstrasse: "Flandernstraße", stadtmitte: "Stadtmitte" };
+const REGLER = [["gesundheit", "Gesundheit"], ["kalorien", "Wenig Kalorien"], ["preis", "Niedriger Preis"], ["eiweiss", "Viel Eiweiß"]];
+const STANDARD = { mensa: "flandernstrasse", vegan: false, vegetarisch: false, gesundheit: 2, kalorien: 1, preis: 2, eiweiss: 1 };
+const SCHLUESSEL = "mensa-coach-prioritaeten";
+const $ = (id) => document.getElementById(id);
+const cache = {};
+const heute = new Date().toLocaleDateString("sv-SE");
+let tagDatum = heute;
+
+function ladePrio() {
+  try { return { ...STANDARD, ...JSON.parse(localStorage.getItem(SCHLUESSEL) || "{}") }; }
+  catch (e) { return { ...STANDARD }; }
+}
+let prio = ladePrio();
+function speichern() { try { localStorage.setItem(SCHLUESSEL, JSON.stringify(prio)); } catch (e) { /* Speicher gesperrt */ } }
+
+function el(tag, klasse, text, kinder) {
+  const e = document.createElement(tag);
+  if (klasse) e.className = klasse;
+  if (text != null) e.textContent = text;
+  (kinder || []).forEach((k) => e.appendChild(k));
+  return e;
+}
+const euro = (p) => (p == null ? "–" : p.toFixed(2).replace(".", ",") + " €");
+const komma = (z) => String(z).replace(".", ",");
+const datumDE = (iso) => iso.slice(8, 10) + "." + iso.slice(5, 7) + ".";
+
+function quelle(mensa) {
+  if (!location.hostname.endsWith(".github.io")) throw new Error("Bitte öffne die App über ihre github.io-Adresse.");
+  const besitzer = location.hostname.split(".")[0];
+  const repo = location.pathname.split("/")[1];
+  return `https://raw.githubusercontent.com/${besitzer}/${repo}/main/data/${mensa}.json`;
+}
+async function ladeSpeiseplan(mensa) {
+  if (cache[mensa]) return cache[mensa];
+  const r = await fetch(quelle(mensa), { cache: "no-store" });
+  if (!r.ok) throw new Error("Datei nicht gefunden (Fehler " + r.status + "). Wurde der Workflow schon einmal gestartet?");
+  cache[mensa] = await r.json();
+  return cache[mensa];
+}
+
+function punkte(gerichte) {
+  const gew = { gesundheit: +prio.gesundheit, kalorien: +prio.kalorien, preis: +prio.preis, eiweiss: +prio.eiweiss };
+  const wert = { gesundheit: (g) => g.gesundheit, kalorien: (g) => g.kcal_portion, preis: (g) => g.preis_studierende, eiweiss: (g) => g.eiweiss_100g };
+  const niedrigGut = { kalorien: true, preis: true };
+  const summe = Object.values(gew).reduce((a, b) => a + b, 0);
+  const grenzen = {};
+  for (const k in gew) {
+    const v = gerichte.map(wert[k]).filter(Number.isFinite);
+    grenzen[k] = [Math.min(...v), Math.max(...v)];
+  }
+  const liste = gerichte.map((g) => {
+    let s = 0;
+    for (const k in gew) {
+      const v = wert[k](g), lo = grenzen[k][0], hi = grenzen[k][1];
+      const ok = Number.isFinite(v) && hi > lo;
+      let n = ok ? (v - lo) / (hi - lo) : 0.5;
+      if (ok && niedrigGut[k]) n = 1 - n;
+      s += gew[k] * n;
+    }
+    return { g, p: summe ? s / summe : 0.5 };
+  });
+  return liste.sort((a, b) => b.p - a.p || (b.g.gesundheit || 0) - (a.g.gesundheit || 0));
+}
+
+function ampel(w) { return w == null ? "grau" : w >= 7 ? "gruen" : w >= 4 ? "gelb" : "rot"; }
+
+function karte(e, gross) {
+  const g = e.g;
+  const k = el("article", "karte gericht" + (gross ? " gross" : ""));
+  const kopf = el("div", "zeile", null, [el("span", "kategorie", g.kategorie), el("span", "passt", "Passt zu " + Math.round(e.p * 100) + " %")]);
+  const marken = el("div", "marken");
+  if (g.vegan) marken.append(el("span", "marke", "vegan"));
+  else if (g.vegetarisch) marken.append(el("span", "marke", "vegetarisch"));
+  const gesund = el("div", "gesund", null, [
+    el("span", "ampel " + ampel(g.gesundheit)),
+    el("span", null, g.gesundheit == null ? "Gesundheit: keine Bewertung" : "Gesundheit " + g.gesundheit + "/10 (geschätzt)"),
+  ]);
+  const zahlen = el("div", "zahlen");
+  [
+    ["Preis", euro(g.preis_studierende)],
+    ["Kalorien", g.kcal_portion == null ? "–" : "ca. " + g.kcal_portion + " kcal (geschätzt)"],
+    ["Eiweiß", g.eiweiss_100g == null ? "–" : komma(g.eiweiss_100g) + " g/100 g"],
+  ].forEach((p) => zahlen.append(el("div", "zahl", null, [el("small", null, p[0]), el("strong", null, p[1])])));
+  k.append(kopf, el(gross ? "h2" : "h3", "name", g.name), marken, gesund, zahlen);
+  if (g.begruendung) k.append(el("p", "grund", g.begruendung + " (geschätzt)"));
+  return k;
+}
+
+function mailKnopf(e, tag, mensaName) {
+  const g = e.g;
+  const text = [
+    "Mein Mensa-Tipp für " + tag.wochentag + ", " + datumDE(tag.datum) + " (Mensa " + mensaName + "):", "",
+    g.name, "Preis: " + euro(g.preis_studierende),
+    g.gesundheit == null ? "" : "Gesundheit: " + g.gesundheit + "/10 (geschätzt)",
+    g.begruendung || "", "", "Gefunden mit dem Mensa-Coach: " + location.href,
+  ].join("\n");
+  const a = el("a", "knopf", "Per Mail teilen");
+  a.href = "mailto:?subject=" + encodeURIComponent("Mensa-Tipp: " + g.name) + "&body=" + encodeURIComponent(text);
+  return a;
+}
+
+async function zeige() {
+  document.querySelectorAll("#mensen button").forEach((b) => b.classList.toggle("aktiv", b.dataset.mensa === prio.mensa));
+  const inhalt = $("inhalt");
+  let daten;
+  try { daten = await ladeSpeiseplan(prio.mensa); }
+  catch (fehler) {
+    $("tabs").replaceChildren();
+    $("stand").textContent = "";
+    inhalt.replaceChildren(el("div", "karte meldung", "Der Speiseplan konnte nicht geladen werden: " + fehler.message));
+    return;
+  }
+  const tage = daten.tage;
+  if (!tage.some((t) => t.datum === tagDatum)) tagDatum = tage[0].datum;
+  $("stand").textContent = "Stand: " + new Date(daten.stand).toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" }) + " · Gesundheit und Kalorien sind KI-Schätzungen";
+  $("tabs").replaceChildren(...tage.map((t) => {
+    const b = el("button", "tab" + (t.datum === tagDatum ? " aktiv" : "") + (t.datum === heute ? " ist-heute" : ""), t.wochentag.slice(0, 2) + " " + datumDE(t.datum));
+    b.onclick = () => { tagDatum = t.datum; zeige(); };
+    return b;
+  }));
+  const tag = tage.find((t) => t.datum === tagDatum);
+  const liste = tag.gerichte.filter((g) => (!prio.vegan || g.vegan) && (!prio.vegetarisch || g.vegetarisch));
+  if (!tag.gerichte.length) { inhalt.replaceChildren(el("div", "karte meldung", "An diesem Tag gibt es keine Gerichte (vielleicht geschlossen).")); return; }
+  if (!liste.length) { inhalt.replaceChildren(el("div", "karte meldung", "Kein Gericht passt zu deinen Filtern.")); return; }
+  const rang = punkte(liste);
+  const gross = karte(rang[0], true);
+  gross.prepend(el("div", "chip", "Tagesempfehlung"));
+  gross.append(mailKnopf(rang[0], tag, MENSEN[prio.mensa]));
+  const teile = [gross];
+  if (rang.length > 1) {
+    teile.push(el("h2", "trenner", "Weitere Gerichte"));
+    teile.push(el("div", "raster", null, rang.slice(1).map((e) => karte(e, false))));
+  }
+  inhalt.replaceChildren(...teile);
+}
+
+function aufbauen() {
+  $("mensen").replaceChildren(...Object.keys(MENSEN).map((schluessel) => {
+    const b = el("button", null, MENSEN[schluessel]);
+    b.dataset.mensa = schluessel;
+    b.onclick = () => { prio.mensa = schluessel; speichern(); zeige(); };
+    return b;
+  }));
+  REGLER.forEach((r) => {
+    const ausgabe = el("output", null, String(prio[r[0]]));
+    const regler = document.createElement("input");
+    regler.type = "range"; regler.min = 0; regler.max = 3; regler.step = 1; regler.value = prio[r[0]];
+    regler.oninput = () => { prio[r[0]] = +regler.value; ausgabe.textContent = regler.value; speichern(); zeige(); };
+    $("regler").append(el("label", "regler", null, [el("span", "reglerkopf", null, [el("span", null, r[1]), ausgabe]), regler]));
+  });
+  ["vegan", "vegetarisch"].forEach((k) => {
+    const c = $(k);
+    c.checked = !!prio[k];
+    c.onchange = () => { prio[k] = c.checked; speichern(); zeige(); };
+  });
+  zeige();
+}
+aufbauen();
+</script>
+</body>
+</html>
