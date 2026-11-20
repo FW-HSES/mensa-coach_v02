@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-19T07:05:45+01:00",
+ "stand": "2026-11-20T07:06:52+01:00",
  "tage": [
   {
    "datum": "2026-11-16",
@@ -15,7 +15,7 @@
      "eiweiss_100g": 1.7,
      "gesundheit": 8,
      "kcal_portion": 135,
-     "begruendung": "Viel Gemüse, wenig Fett, niedrige Kalorien."
+     "begruendung": "viel Gemüse, wenig Fett"
     },
     {
      "kategorie": "Hauptgericht",
@@ -27,7 +27,7 @@
      "eiweiss_100g": 6.5,
      "gesundheit": 5,
      "kcal_portion": 382,
-     "begruendung": "Proteinreich, aber frittierte Kartoffeln, moderater Fettgehalt."
+     "begruendung": "Proteinreich, aber fettig und kalorienreich"
     }
    ]
   },
@@ -45,7 +45,7 @@
      "eiweiss_100g": 4.1,
      "gesundheit": 7,
      "kcal_portion": 285,
-     "begruendung": "Ballaststoffe, moderat Kalorien, wenig Fett."
+     "begruendung": "Ballaststoffe, moderat Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -57,7 +57,7 @@
      "eiweiss_100g": 5.7,
      "gesundheit": 4,
      "kcal_portion": 472,
-     "begruendung": "Hoher Fettanteil durch Speck und Sour-Cream."
+     "begruendung": "Speck und Sahne erhöhen Fett"
     },
     {
      "kategorie": "Hauptgericht",
@@ -69,7 +69,7 @@
      "eiweiss_100g": 5.1,
      "gesundheit": 3,
      "kcal_portion": 433,
-     "begruendung": "Frittierte Pommes, Wurst, viel Fett und Salz."
+     "begruendung": "Wurst, Pommes, viel Salz und Fett"
     }
    ]
   },
@@ -85,9 +85,9 @@
      "vegetarisch": true,
      "kcal_100g": 157.0,
      "eiweiss_100g": 8.3,
-     "gesundheit": 7,
+     "gesundheit": 6,
      "kcal_portion": 393,
-     "begruendung": "Vollkorn, pflanzliches Protein, moderate Kalorien."
+     "begruendung": "Vollkorn, Soja, aber kalorienreich"
     },
     {
      "kategorie": "Hauptgericht",
@@ -99,7 +99,7 @@
      "eiweiss_100g": 5.2,
      "gesundheit": 6,
      "kcal_portion": 310,
-     "begruendung": "Gemüseanteil, aber cremiges Gratin, mittlerer Fett."
+     "begruendung": "Gemüse, moderate Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -111,7 +111,7 @@
      "eiweiss_100g": 8.1,
      "gesundheit": 4,
      "kcal_portion": 410,
-     "begruendung": "Fleisch, Bratensauce, Pommes – hoher Fett- und Salzgehalt."
+     "begruendung": "Fleisch, Pommes, hohe Kalorien"
     }
    ]
   },
@@ -129,7 +129,7 @@
      "eiweiss_100g": 3.4,
      "gesundheit": 8,
      "kcal_portion": 250,
-     "begruendung": "Vollkorn, viel Gemüse, niedrige Kalorien."
+     "begruendung": "Vollkorn, viel Gemüse, low kcal"
     },
     {
      "kategorie": "Hauptgericht",
@@ -141,7 +141,7 @@
      "eiweiss_100g": 6.3,
      "gesundheit": 6,
      "kcal_portion": 320,
-     "begruendung": "Protein, aber etwas Fett und Salz."
+     "begruendung": "Protein, aber etwas fettig"
     },
     {
      "kategorie": "Hauptgericht",
@@ -153,7 +153,7 @@
      "eiweiss_100g": 8.0,
      "gesundheit": 3,
      "kcal_portion": 465,
-     "begruendung": "Käse, Butter, hohe Kalorien, wenig Gemüse."
+     "begruendung": "Käse, Butter, sehr kalorienreich"
     }
    ]
   },
@@ -170,8 +170,8 @@
      "kcal_100g": 117.0,
      "eiweiss_100g": 2.4,
      "gesundheit": 7,
-     "kcal_portion": 292,
-     "begruendung": "Vegan, Gemüse, moderate Kalorien, wenig Fett."
+     "kcal_portion": 293,
+     "begruendung": "Vegan, Gemüse, moderate Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -183,7 +183,7 @@
      "eiweiss_100g": 6.4,
      "gesundheit": 4,
      "kcal_portion": 435,
-     "begruendung": "Frittierter Fisch, Remoulade, hoher Fettgehalt."
+     "begruendung": "Frittierter Fisch, Remoulade, kalorienreich"
     }
    ]
   }
