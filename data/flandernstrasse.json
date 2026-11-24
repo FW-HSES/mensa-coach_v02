@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-23T07:08:21+01:00",
+ "stand": "2026-11-24T07:03:32+01:00",
  "tage": [
   {
    "datum": "2026-11-23",
@@ -27,7 +27,7 @@
      "eiweiss_100g": 4.2,
      "gesundheit": 5,
      "kcal_portion": 216,
-     "begruendung": "Fettige Sauce, aber Proteinreich"
+     "begruendung": "Fettige Sauce, aber proteinreich"
     }
    ]
   },
@@ -45,7 +45,7 @@
      "eiweiss_100g": 3.0,
      "gesundheit": 8,
      "kcal_portion": 300,
-     "begruendung": "Pflanzlich, ballaststoffreich, etwas kalorienreich"
+     "begruendung": "Pflanzlich, wenig Fett, etwas höher Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -57,7 +57,7 @@
      "eiweiss_100g": 5.5,
      "gesundheit": 4,
      "kcal_portion": 254,
-     "begruendung": "Fleischkäse und Sahne, hoher Fettgehalt"
+     "begruendung": "Fleischkäse, viel Fett, wenig Gemüse"
     }
    ]
   },
@@ -73,7 +73,7 @@
      "vegetarisch": true,
      "kcal_100g": 111.0,
      "eiweiss_100g": 2.8,
-     "gesundheit": 8,
+     "gesundheit": 7,
      "kcal_portion": 222,
      "begruendung": "Gemüsebasis, moderate Kalorien"
     },
@@ -85,9 +85,9 @@
      "vegetarisch": true,
      "kcal_100g": 106.0,
      "eiweiss_100g": 4.4,
-     "gesundheit": 7,
+     "gesundheit": 6,
      "kcal_portion": 212,
-     "begruendung": "Gemüse und Kartoffeln, ausgewogen"
+     "begruendung": "Kartoffel‑Gemüse, etwas cremig"
     },
     {
      "kategorie": "Hauptgericht",
@@ -99,7 +99,7 @@
      "eiweiss_100g": 8.5,
      "gesundheit": 5,
      "kcal_portion": 352,
-     "begruendung": "Fleisch, Käse, hohe Kalorien"
+     "begruendung": "Rotes Fleisch, Käse, hohe Kalorien"
     }
    ]
   },
@@ -117,7 +117,7 @@
      "eiweiss_100g": 2.1,
      "gesundheit": 6,
      "kcal_portion": 198,
-     "begruendung": "Sauerkraut gut, aber wenig Protein"
+     "begruendung": "Sauerkraut, wenig Fett, moderate Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -129,7 +129,7 @@
      "eiweiss_100g": 5.8,
      "gesundheit": 4,
      "kcal_portion": 326,
-     "begruendung": "Käse und Nüsse, sehr kalorienreich"
+     "begruendung": "Käse, Nüsse, süße Birne, kalorienreich"
     },
     {
      "kategorie": "Hauptgericht",
@@ -139,9 +139,9 @@
      "vegetarisch": false,
      "kcal_100g": 159.0,
      "eiweiss_100g": 10.1,
-     "gesundheit": 4,
+     "gesundheit": 3,
      "kcal_portion": 318,
-     "begruendung": "Fettreich, traditionelle Mahlzeit"
+     "begruendung": "Fettreich, Rahmsauce, klassische Kohlenhydrate"
     }
    ]
   },
@@ -159,7 +159,7 @@
      "eiweiss_100g": 3.0,
      "gesundheit": 8,
      "kcal_portion": 188,
-     "begruendung": "Vollkorn, viel Gemüse, leicht"
+     "begruendung": "Vollkornreis, viel Gemüse, niedrige Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -171,7 +171,7 @@
      "eiweiss_100g": 6.7,
      "gesundheit": 5,
      "kcal_portion": 374,
-     "begruendung": "Panierung und Remoulade erhöhen Fett"
+     "begruendung": "Panierte Fisch, Remoulade, kalorienreich"
     }
    ]
   }
