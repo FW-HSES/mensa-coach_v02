@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-24T07:03:32+01:00",
+ "stand": "2026-11-25T07:02:11+01:00",
  "tage": [
   {
    "datum": "2026-11-23",
@@ -14,7 +14,7 @@
      "kcal_100g": 97.0,
      "eiweiss_100g": 3.5,
      "gesundheit": 7,
-     "kcal_portion": 194,
+     "kcal_portion": 242,
      "begruendung": "Viel Gemüse, moderate Kalorien"
     },
     {
@@ -26,8 +26,8 @@
      "kcal_100g": 108.0,
      "eiweiss_100g": 4.2,
      "gesundheit": 5,
-     "kcal_portion": 216,
-     "begruendung": "Fettige Sauce, aber proteinreich"
+     "kcal_portion": 270,
+     "begruendung": "Fleisch, Sahnesauce, hoher Fettanteil"
     }
    ]
   },
@@ -44,8 +44,8 @@
      "kcal_100g": 150.0,
      "eiweiss_100g": 3.0,
      "gesundheit": 8,
-     "kcal_portion": 300,
-     "begruendung": "Pflanzlich, wenig Fett, etwas höher Kalorien"
+     "kcal_portion": 375,
+     "begruendung": "Vollwertig, pflanzlich, aber kalorienreich"
     },
     {
      "kategorie": "Hauptgericht",
@@ -56,8 +56,8 @@
      "kcal_100g": 127.0,
      "eiweiss_100g": 5.5,
      "gesundheit": 4,
-     "kcal_portion": 254,
-     "begruendung": "Fleischkäse, viel Fett, wenig Gemüse"
+     "kcal_portion": 318,
+     "begruendung": "Fleischkäse, Sahne, wenig Gemüse"
     }
    ]
   },
@@ -74,8 +74,8 @@
      "kcal_100g": 111.0,
      "eiweiss_100g": 2.8,
      "gesundheit": 7,
-     "kcal_portion": 222,
-     "begruendung": "Gemüsebasis, moderate Kalorien"
+     "kcal_portion": 278,
+     "begruendung": "Gemüse‑Gnocchi, moderate Kalorien"
     },
     {
      "kategorie": "Hauptgericht",
@@ -86,8 +86,8 @@
      "kcal_100g": 106.0,
      "eiweiss_100g": 4.4,
      "gesundheit": 6,
-     "kcal_portion": 212,
-     "begruendung": "Kartoffel‑Gemüse, etwas cremig"
+     "kcal_portion": 265,
+     "begruendung": "Kartoffel‑Gemüse, etwas Käse"
     },
     {
      "kategorie": "Hauptgericht",
@@ -98,7 +98,7 @@
      "kcal_100g": 176.0,
      "eiweiss_100g": 8.5,
      "gesundheit": 5,
-     "kcal_portion": 352,
+     "kcal_portion": 440,
      "begruendung": "Rotes Fleisch, Käse, hohe Kalorien"
     }
    ]
@@ -116,8 +116,8 @@
      "kcal_100g": 99.0,
      "eiweiss_100g": 2.1,
      "gesundheit": 6,
-     "kcal_portion": 198,
-     "begruendung": "Sauerkraut, wenig Fett, moderate Kalorien"
+     "kcal_portion": 248,
+     "begruendung": "Schupfnudeln, Sauerkraut, moderate Fettmenge"
     },
     {
      "kategorie": "Hauptgericht",
@@ -128,8 +128,8 @@
      "kcal_100g": 163.0,
      "eiweiss_100g": 5.8,
      "gesundheit": 4,
-     "kcal_portion": 326,
-     "begruendung": "Käse, Nüsse, süße Birne, kalorienreich"
+     "kcal_portion": 408,
+     "begruendung": "Gorgonzola, Nüsse, süße Birne, kalorienreich"
     },
     {
      "kategorie": "Hauptgericht",
@@ -140,8 +140,8 @@
      "kcal_100g": 159.0,
      "eiweiss_100g": 10.1,
      "gesundheit": 3,
-     "kcal_portion": 318,
-     "begruendung": "Fettreich, Rahmsauce, klassische Kohlenhydrate"
+     "kcal_portion": 398,
+     "begruendung": "Schweinebraten, Rahmsauce, sehr fettig"
     }
    ]
   },
@@ -158,8 +158,8 @@
      "kcal_100g": 94.0,
      "eiweiss_100g": 3.0,
      "gesundheit": 8,
-     "kcal_portion": 188,
-     "begruendung": "Vollkornreis, viel Gemüse, niedrige Kalorien"
+     "kcal_portion": 235,
+     "begruendung": "Vollkornreis, viel Gemüse, leicht"
     },
     {
      "kategorie": "Hauptgericht",
@@ -170,8 +170,8 @@
      "kcal_100g": 177.0,
      "eiweiss_100g": 5.9,
      "gesundheit": 2,
-     "kcal_portion": 354,
-     "begruendung": "Frittierte Pommes, Käse, Bratensauce, sehr kalorienreich"
+     "kcal_portion": 443,
+     "begruendung": "Pommes, Bratensauce, Mozzarella, sehr kalorienreich"
     },
     {
      "kategorie": "Hauptgericht",
@@ -182,8 +182,8 @@
      "kcal_100g": 187.0,
      "eiweiss_100g": 6.7,
      "gesundheit": 5,
-     "kcal_portion": 374,
-     "begruendung": "Panierte Fisch, Remoulade, kalorienreich"
+     "kcal_portion": 468,
+     "begruendung": "Panierter Fisch, Remoulade, hohe Kalorien"
     }
    ]
   }
